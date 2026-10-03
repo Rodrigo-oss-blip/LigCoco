@@ -1,0 +1,167 @@
+:root {
+  --bg-color: #F6F3EA;
+  --text-color: #264335;
+  --header-bg: #F6F3EA;
+  --header-border: rgba(38, 67, 53, 0.1);
+  --btn-contato-cor: #264335;
+  --btn-contato-hover-bg: #264335;
+  --btn-contato-hover-text: #F6F3EA;
+  --btn-menu-bg: #785028a6;
+  --btn-menu-text: #ffffff;
+  --btn-menu-hover: #785028;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  padding: 0 clamp(20px, 4vw, 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--header-bg);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cabecalho {
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.cabecalho .BtContato {
+  justify-self: start;
+}
+
+.Logo {
+  display: block;
+  margin-top: 60px;
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.cabecalho .BtMenu {
+  justify-self: end;
+}
+
+.BtContato {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--btn-contato-cor);
+  background-color: transparent;
+  border: 1px solid var(--btn-contato-cor);
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.BtContato .icone-seta {
+  width: 10px;
+  height: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.BtContato:hover {
+  background-color: var(--btn-contato-hover-bg);
+  color: var(--btn-contato-hover-text);
+}
+
+.BtContato:hover .icone-seta {
+  transform: translate(2px, -2px);
+  filter: brightness(0) invert(1);
+}
+
+.BtContato:active {
+  transform: scale(0.97);
+}
+
+.BtContato:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(38, 67, 53, 0.25);
+}
+
+.BtMenu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 22px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--btn-contato-cor);
+  background-color: transparent;
+  border: 1px solid var(--btn-contato-cor);
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  line-height: 1;
+  font-family: inherit;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.BtMenu .icone-menu {
+  width: 18px;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.BtMenu:hover {
+  background-color: var(--btn-contato-hover-bg);
+  color: var(--btn-contato-hover-text);
+}
+
+.BtMenu:hover .icone-menu {
+  filter: brightness(0) invert(0.95);
+  transform: scale(1.05);
+}
+
+.BtMenu:active {
+  transform: scale(0.97);
+}
+
+.BtMenu:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(38, 67, 53, 0.25);
+}
+
+main {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 clamp(20px, 4vw, 60px);
+  margin: 0 auto;
+  flex: 1;
+}
+
+footer {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 clamp(20px, 4vw, 60px);
+  margin: 0 auto;
+}

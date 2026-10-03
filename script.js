@@ -1,3 +1,0 @@
-function mudarTema(){
-    addEventListener(click)
-}
